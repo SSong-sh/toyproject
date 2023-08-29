@@ -15,13 +15,17 @@ public class TestController {
     @Autowired
     private TestRepository testRepository;
 
-    @PostMapping("test")
+    @GetMapping("/api/hello")
+    public String test() {
+        return "Hello, world";
+    }
+    @PostMapping("/test")
     public void testInsert(Member member) {
         member.setName("test");
         testRepository.save(member);
     }
 
-    @GetMapping("test")
+    @GetMapping("/test")
     public List<Member> testSelect() {
         return testRepository.findAll();
     }
