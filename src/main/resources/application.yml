@@ -1,0 +1,25 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: study
+    password: 1234
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+    database: oracle
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+
+
+
+
+
+
+logging:
+  level:
+    org.springframework: debug
