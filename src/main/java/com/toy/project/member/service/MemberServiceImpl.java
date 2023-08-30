@@ -44,6 +44,10 @@ public class MemberServiceImpl implements MemberService {
     public EntityModel<Optional<Member>> findMemberById(long member_num) {
         Optional<Member> member = memberJpaRepository.findById(member_num);
 
+        if (!member.isPresent()) {
+            throw new UserNotFoundException(String.format("ID[%s] not found", member_num));
+        }
+
         //hateoas
         EntityModel<Optional<Member>> model = EntityModel.of(member);
         WebMvcLinkBuilder linkTo = linkTo(methodOn(MemberController.class).findAllMembers());
