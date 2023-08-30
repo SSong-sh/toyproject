@@ -1,4 +1,4 @@
-package com.toy.project.domain;
+package com.toy.project.test.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Member {
+public class TestMember {
     @Id
     @GeneratedValue
     private long id;

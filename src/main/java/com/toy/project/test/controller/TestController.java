@@ -1,7 +1,7 @@
-package com.toy.project.controller;
+package com.toy.project.test.controller;
 
-import com.toy.project.domain.Member;
-import com.toy.project.repository.TestRepository;
+import com.toy.project.test.domain.TestMember;
+import com.toy.project.test.repository.TestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,13 +20,13 @@ public class TestController {
         return "Hello, world";
     }
     @PostMapping("/test")
-    public void testInsert(Member member) {
-        member.setName("test");
-        testRepository.save(member);
+    public void testInsert(TestMember testMember) {
+        testMember.setName("test");
+        testRepository.save(testMember);
     }
 
     @GetMapping("/test")
-    public List<Member> testSelect() {
+    public List<TestMember> testSelect() {
         return testRepository.findAll();
     }
 }
