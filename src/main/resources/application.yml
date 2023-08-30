@@ -11,11 +11,15 @@ spring:
     show-sql: true
     defer-datasource-initialization: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     database: oracle
     database-platform: org.hibernate.dialect.Oracle10gDialect
 
 
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
 
 
 

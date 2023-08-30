@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.toy.project.member.repository.MemberMapper">
+    <update id="deleteMember">
+        UPDATE member SET status = 0 WHERE member_num = #{member_num}
+    </update>
+    <update id="updateMember">
+        UPDATE member SET id = #{member.id} , name = #{member.name}, password = #{member.password}, zip_code = #{member.zip_code},
+                          address = #{member.address} , email = #{member.email} , phone = #{member.phone}
+                      WHERE member_num = #{member_num}
+    </update>
+</mapper>

@@ -27,7 +27,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.1'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa' //JPA
-
+    implementation 'org.springframework.boot:spring-boot-starter-hateoas'// hateoas
+    implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.6'// mybatis
 
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
