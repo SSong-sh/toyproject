@@ -47,4 +47,7 @@ public class Member {
     @Column(name = "status")
     private int status = 1; // 회원상태 탈퇴시 0 활동시 1
 
+    @ColumnDefault("0")
+    @Column(name = "card")
+    private int card = 0;
 }
