@@ -11,7 +11,7 @@ spring:
     show-sql: true
     defer-datasource-initialization: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
     database: oracle
     database-platform: org.hibernate.dialect.Oracle10gDialect
 

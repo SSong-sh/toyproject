@@ -1,6 +1,7 @@
 package com.toy.project.member.domain;
 
 import com.sun.istack.NotNull;
+import com.toy.project.product.domain.Product;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,6 +9,7 @@ import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -50,4 +52,7 @@ public class Member {
     @ColumnDefault("0")
     @Column(name = "card")
     private int card = 0;
+
+    @OneToMany(mappedBy = "member")
+    private List<Product> products;
 }
