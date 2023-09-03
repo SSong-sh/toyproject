@@ -1,21 +1,21 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
-  const [hello, setHello] = useState('')
+  const [hello, setHello] = useState("");
 
   useEffect(() => {
-    axios.get('/api/hello')
-        .then(response => setHello(response.data))
-        .catch(error => console.log(error))
+    axios
+      .get("/api/hello")
+      .then((response) => setHello(response.data))
+      .catch((error) => console.log(error));
   }, []);
 
   return (
-      <div>
-        백엔드에서 가져온 데이터입니다 : {hello}
-
-      </div>
-
+    <div>
+      백엔드에서 가져온 데이터입니다 : {hello}
+      프론트엔드에서 가져온 데이터입니다 : {hello}
+    </div>
   );
 }
 
