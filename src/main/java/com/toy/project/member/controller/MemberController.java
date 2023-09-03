@@ -70,4 +70,6 @@ public class MemberController {
         memberService.deleteMember(member_num);
     }
 
+
+
 }
