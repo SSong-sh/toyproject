@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       백엔드에서 가져온 데이터입니다 : {hello}
-      프론트엔드에서 가져온 데이터입니다 : {hello}
+      프론트엔드에서 가져온 데이터입니다 제발: {hello}
     </div>
   );
 }
