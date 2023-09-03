@@ -69,7 +69,4 @@ public class MemberController {
     public void deleteMember(@PathVariable long member_num) {
         memberService.deleteMember(member_num);
     }
-
-
-
 }
